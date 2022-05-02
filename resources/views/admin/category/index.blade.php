@@ -7,17 +7,16 @@
 
     <!--  page-wrapper -->
     <div id="page-wrapper">
-
-        <div class="row">
-            <!-- Page Header -->
+        <div class="row" style=" padding-top: 20px">
+            <!--  page header -->
             <div class="col-lg-12">
-                <h1 class="page-header">Category List</h1>
+                <h1><a href="/admin/category/create" class="btn btn-primary" >Add Category</a></h1>
             </div>
-            <!--End Page Header -->
+            <!-- end  page header -->
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
-                Category List
+                <h1 class="page-header">Category List</h1>
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
