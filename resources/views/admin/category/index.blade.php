@@ -10,13 +10,13 @@
         <div class="row" style=" padding-top: 20px">
             <!--  page header -->
             <div class="col-lg-12">
-                <h1><a href="/admin/category/create" class="btn btn-primary" >Add Category</a></h1>
+                <h1><a href="/admin/category/create" class="btn btn-primary"><i class="fa fa-plus fa-fw"></i>Add Category</a></h1>
             </div>
             <!-- end  page header -->
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h1 class="page-header">Category List</h1>
+                <h3 class="page-header" style="margin: 5px 0 3px; padding-bottom: 1px;">Category List</h3>
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
@@ -45,7 +45,8 @@
                             <td>{{$rs->image}}</td>
                             <td>{{$rs->status}}</td>
                             <td><a href="/admin/category/edit/{{$rs->id}}"class="btn btn-info">Edit</a></td>
-                            <td><a href="/admin/category/delete/{{$rs->id}}"class="btn btn-danger">Delete</a></td>
+                            <td><a href="/admin/category/destroy/{{$rs->id}}"class="btn btn-danger"
+                                   onclick="return confirm('Deleting !! Are you sure ?')">Delete</a></td>
                             <td><a href="/admin/category/show/{{$rs->id}}"class="btn btn-success">Show</a></td>
                         </tr>
                         @endforeach

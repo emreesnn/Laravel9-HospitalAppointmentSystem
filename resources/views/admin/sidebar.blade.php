@@ -33,10 +33,10 @@
             </li>
 
             <li class="">
-                <a href="/admin"><i class="fa fa-home fa-fw"></i>Dashboard</a>
+                <a href="/admin"><i class="fa fa-home fa-fw" style="color: #FF0000"></i>Dashboard</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-calendar fa-fw"></i>Appointment<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-calendar fa-fw" style="color: #FF9A00"></i>Appointment<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
                         <a href="flot.html">Upcoming Appointment</a>
@@ -64,7 +64,7 @@
                 <a href="/admin/messages"><i class="fa fa-envelope fa-fw"></i>Messages</a>
             </li>
             <li class="">
-                <a href="/admin/user"><i class="fa fa-users fa-fw"></i>Users</a>
+                <a href="/admin/user"><i class="fa fa-user fa-fw" style="color:#0000FF" ></i>Users</a>
             </li>
             <li class="">
                 <a href="/admin/social"><i class="fa fa-dashboard fa-fw"></i>Social </a>
