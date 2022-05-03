@@ -11,8 +11,8 @@
         <div class="row" style=" padding-top: 40px">
             <!-- Page Header -->
             <div class="col-lg-12">
-                <a href="/admin/category/edit/{{$data->id}}" class="btn btn-primary"><i class="fa fa-refresh fa-fw"></i>Edit</a>
-                <a href="/admin/category/destroy/{{$data->id}}" class="btn btn-danger" onclick="return confirm('Deleting !! Are you sure ?')"><i class="fa fa-ban fa-fw"></i>Delete</a>
+                <a href="{{route('admin.category.edit',['id'=>$data->id])}}" class="btn btn-primary"><i class="fa fa-refresh fa-fw"></i>Edit</a>
+                <a href="{{route('admin.category.destroy',['id'=>$data->id])}}" class="btn btn-danger" onclick="return confirm('Deleting !! Are you sure ?')"><i class="fa fa-ban fa-fw"></i>Delete</a>
             </div>
             <!--End Page Header -->
         </div>
