@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminPanel\AdminPoliclinicController;
+use App\Http\Controllers\AdminPanel\ImageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
@@ -62,7 +63,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/show/{id}','show')->name('show');
     });
 
-    // *****************ADMIN POLİCLİNİC ROUTES *********************
+    // *****************ADMIN POLICLINIC ROUTES *********************
     Route::prefix('/policlinic')->name('policlinic.')->controller(AdminPoliclinicController::class)->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('/create','create')->name('create');
@@ -71,5 +72,12 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::post('/update/{id}','update')->name('update');
         Route::get('/destroy/{id}','destroy')->name('destroy');
         Route::get('/show/{id}','show')->name('show');
+    });
+
+    // *****************ADMIN POLICLINIC IMAGE GALLERY ROUTES *********************
+    Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function () {
+        Route::get('/{pid}', 'index')->name('index');
+        Route::post('/store/{pid}','store')->name('store');
+        Route::get('/destroy/{pid}/{id}','destroy')->name('destroy');
     });
 });

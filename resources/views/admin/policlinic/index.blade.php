@@ -28,6 +28,7 @@
                             <th>Category</th>
                             <th>Title</th>
                             <th>Image</th>
+                            <th>Image Gallery</th>
                             <th>Status</th>
                             <th style="width: 40px">Edit</th>
                             <th style="width: 40px">Delete</th>
@@ -44,6 +45,11 @@
                                 @if($rs->image)
                                 <img src="{{Storage::url($rs->image)}}" style="height: 40px">
                                 @endif
+                            </td>
+                            <td><a href="{{route('admin.image.index',['pid'=>$rs->id])}}"
+                                onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')">
+                                <img src="{{asset('assets')}}/adminassets/img/gallery_128x128.jpg" height="40px"/>
+                                </a>
                             </td>
                             <td>{{$rs->status}}</td>
                             <td><a href="{{route('admin.policlinic.edit',['id'=>$rs->id])}}"class="btn btn-info">Edit</a></td>
