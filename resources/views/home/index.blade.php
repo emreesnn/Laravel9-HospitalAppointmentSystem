@@ -58,7 +58,53 @@
         </div>
     </section>
     <!-- End service  -->
+    <!-- Start features section -->
+    <section id="mu-features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="mu-features-area">
+                        <!-- Start Title -->
+                        <div class="mu-title">
+                            <h2>Bolumlerimiz</h2>
+                            <p>Göz Kardiyoloji vs vs.</p>
+                        </div>
+                        <!-- End Title -->
+                        <!-- Start features content -->
+                        <div class="mu-features-content">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-4  col-sm-6">
+                                    <div  class="mu-single-feature" style="text-align:center; cursor: pointer;"
+                                          onclick="window.location='#';" >
+                                        <span style="border:none;">
+                                            <img src="{{asset('assets')}}/adminassets/img/infectious-diseases.png"
+                                                style="width: 100px;height: 100px">
+                                        </span>
+                                        <h4>Göz Hastalıkları</h4>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4  col-sm-6">
+                                    <div class="mu-single-feature">
+                                        <span class="fa fa-book"></span>
+                                        <h4>Kardiyoloji</h4>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4  col-sm-6">
+                                    <div class="mu-single-feature">
+                                        <span class="fa fa-book"></span>
+                                        <h4>Nöroloji</h4>
+                                    </div>
+                                </div>
 
+                            </div>
+                        </div>
+                        <!-- End features content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End features section -->
     <!-- Start about us -->
     <section id="mu-about-us">
         <div class="container">
@@ -150,79 +196,6 @@
     </section>
     <!-- End about us counter -->
 
-    <!-- Start features section -->
-    <section id="mu-features">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="mu-features-area">
-                        <!-- Start Title -->
-                        <div class="mu-title">
-                            <h2>Our Features</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ipsa ea maxime mollitia, vitae voluptates, quod at, saepe reprehenderit totam aliquam architecto fugiat sunt animi!</p>
-                        </div>
-                        <!-- End Title -->
-                        <!-- Start features content -->
-                        <div class="mu-features-content">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4  col-sm-6">
-                                    <div class="mu-single-feature">
-                                        <span class="fa fa-book"></span>
-                                        <h4>Professional Courses</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus non dolorem excepturi libero itaque sint labore similique maxime natus eum.</p>
-                                        <a href="#">Read More</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6">
-                                    <div class="mu-single-feature">
-                                        <span class="fa fa-users"></span>
-                                        <h4>Expert Teachers</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus non dolorem excepturi libero itaque sint labore similique maxime natus eum.</p>
-                                        <a href="#">Read More</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6">
-                                    <div class="mu-single-feature">
-                                        <span class="fa fa-laptop"></span>
-                                        <h4>Online Learning</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus non dolorem excepturi libero itaque sint labore similique maxime natus eum.</p>
-                                        <a href="#">Read More</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6">
-                                    <div class="mu-single-feature">
-                                        <span class="fa fa-microphone"></span>
-                                        <h4>Audio Lessons</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus non dolorem excepturi libero itaque sint labore similique maxime natus eum.</p>
-                                        <a href="#">Read More</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6">
-                                    <div class="mu-single-feature">
-                                        <span class="fa fa-film"></span>
-                                        <h4>Video Lessons</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus non dolorem excepturi libero itaque sint labore similique maxime natus eum.</p>
-                                        <a href="#">Read More</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6">
-                                    <div class="mu-single-feature">
-                                        <span class="fa fa-certificate"></span>
-                                        <h4>Professional Certificate</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus non dolorem excepturi libero itaque sint labore similique maxime natus eum.</p>
-                                        <a href="#">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End features content -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End features section -->
-
     <!-- Start latest course section -->
     <section id="mu-latest-courses">
         <div class="container">
@@ -231,8 +204,8 @@
                     <div class="mu-latest-courses-area">
                         <!-- Start Title -->
                         <div class="mu-title">
-                            <h2>Latest Courses</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ipsa ea maxime mollitia, vitae voluptates, quod at, saepe reprehenderit totam aliquam architecto fugiat sunt animi!</p>
+                            <h2>Unitelerimiz</h2>
+                            <p>Yenidogan fizik tedavi vsvs.</p>
                         </div>
                         <!-- End Title -->
                         <!-- Start latest course content -->
@@ -368,7 +341,7 @@
                     <div class="mu-our-teacher-area">
                         <!-- begain title -->
                         <div class="mu-title">
-                            <h2>Our Teachers</h2>
+                            <h2>Doktorlarimz</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, repudiandae, suscipit repellat minus molestiae ea.</p>
                         </div>
                         <!-- end title -->
