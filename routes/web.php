@@ -39,6 +39,8 @@ Route::get('/param/{id}/{number}', [HomeController::class,'param'])->name('param
 //6- Route with post
 Route::post('/save', [HomeController::class,'save'])->name('save');
 
+Route::get('/policlinic/{id}', [HomeController::class,'policlinic'])->name('policlinic');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

@@ -73,29 +73,20 @@
                         <!-- Start features content -->
                         <div class="mu-features-content">
                             <div class="row">
-                                <div class="col-lg-2 col-md-4  col-sm-6">
-                                    <div  class="mu-single-feature" style="text-align:center; cursor: pointer;"
-                                          onclick="window.location='#';" >
-                                        <span style="border:none;">
-                                            <img src="{{asset('assets')}}/adminassets/img/infectious-diseases.png"
-                                                style="width: 100px;height: 100px">
-                                        </span>
-                                        <h4>Göz Hastalıkları</h4>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-4  col-sm-6">
-                                    <div class="mu-single-feature">
-                                        <span class="fa fa-book"></span>
-                                        <h4>Kardiyoloji</h4>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-4  col-sm-6">
-                                    <div class="mu-single-feature">
-                                        <span class="fa fa-book"></span>
-                                        <h4>Nöroloji</h4>
-                                    </div>
-                                </div>
-
+                                @foreach($productlist1 as $rs)
+                                    @if($rs->status = "True")
+                                        <div class="col-lg-2 col-md-4  col-sm-6">
+                                            <div  class="mu-single-feature" style="text-align:center; cursor: pointer;"
+                                                  onclick="window.location='{{route('policlinic',['id'=>$rs->id])}}';" >
+                                                <span style="border:none;">
+                                                    <img src="{{asset('assets')}}/img/clinics/eye.jpg"
+                                                        style="width: 100px;height: 100px">
+                                                </span>
+                                                <h4>{{$rs->title}}</h4>
+                                            </div>
+                                        </div>
+                                    @endif
+                                @endforeach
                             </div>
                         </div>
                         <!-- End features content -->

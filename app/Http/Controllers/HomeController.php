@@ -19,6 +19,13 @@ class HomeController extends Controller
             'productlist1'=>$productlist1
         ]);
     }
+    public function policlinic($id)
+    {
+        $data = Policlinic::find($id);
+        return view('home.policlinic',[
+            'data'=>$data,
+        ]);
+    }
 
     public function test()
     {
