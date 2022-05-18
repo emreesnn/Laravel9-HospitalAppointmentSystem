@@ -3084,7 +3084,8 @@ fieldset[disabled] a.btn {
 }
 .btn-default:active:hover,
 .btn-default.active:hover,
-.open > .dropdown-toggle.btn-default:hover,
+.open > .
+-toggle.btn-default:hover,
 .btn-default:active:focus,
 .btn-default.active:focus,
 .open > .dropdown-toggle.btn-default:focus,

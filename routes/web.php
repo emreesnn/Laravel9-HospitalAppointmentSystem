@@ -40,6 +40,7 @@ Route::get('/param/{id}/{number}', [HomeController::class,'param'])->name('param
 Route::post('/save', [HomeController::class,'save'])->name('save');
 
 Route::get('/policlinic/{id}', [HomeController::class,'policlinic'])->name('policlinic');
+Route::get('/categorypoliclinics/{id}/{slug}', [HomeController::class,'categorypoliclinics'])->name('categorypoliclinics');
 
 Route::middleware([
     'auth:sanctum',

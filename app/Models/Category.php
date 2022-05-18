@@ -13,4 +13,15 @@ class Category extends Model
     {
         return $this->hasMany(Policlinic::class);
     }
+
+    //One to Many Inverse
+    public function parent()
+    {
+        return $this->belongsTo(Category::class,'parent_id');
+    }
+    //One to Many
+    public function children()
+    {
+        return $this->hasMany(Category::class, 'parent_id');
+    }
 }

@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
+    public static function maincategorylist()
+    {
+        return Category::where('parent_id', '=', 0)->with('children')->get();
+    }
     //
     public function index()
     {
@@ -20,6 +24,13 @@ class HomeController extends Controller
         ]);
     }
     public function policlinic($id)
+    {
+        $data = Policlinic::find($id);
+        return view('home.policlinic',[
+            'data'=>$data,
+        ]);
+    }
+    public function categorypoliclinic($id)
     {
         $data = Policlinic::find($id);
         return view('home.policlinic',[

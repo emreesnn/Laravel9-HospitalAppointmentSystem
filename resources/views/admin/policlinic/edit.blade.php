@@ -53,7 +53,7 @@
                             <div class="form-group">
                                 <label>Detail</label>
                                 <textarea class="form-control" id='detail' name="detail">
-                                    {!! $data->detail !!}}
+                                    {!! $data->detail !!}
                                 </textarea>
 
                             </div>
