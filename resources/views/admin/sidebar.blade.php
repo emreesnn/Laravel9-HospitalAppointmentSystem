@@ -71,7 +71,7 @@
             </li>
             <li class="">
                 <ion-icon name="settings-outline"></ion-icon>
-                <a href="/admin/settings"><i class="fa fa-gears fa-fw" style="font-size:22px;padding-right:30px;"></i>Settings</a>
+                <a href="/admin/setting"><i class="fa fa-gears fa-fw" style="font-size:22px;padding-right:30px;"></i>Settings</a>
             </li>
         </ul>
         <!-- end side-menu -->
