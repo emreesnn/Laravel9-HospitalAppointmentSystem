@@ -23,6 +23,7 @@ class HomeController extends Controller
             'productlist1'=>$productlist1
         ]);
     }
+
     public function policlinic($id)
     {
         $data = Policlinic::find($id);
@@ -35,6 +36,13 @@ class HomeController extends Controller
         $data = Policlinic::find($id);
         return view('home.policlinic',[
             'data'=>$data,
+        ]);
+    }
+    public function bolumler()
+    {
+        $productlist1 = Policlinic::limit(6)->get();
+        return view('home.bolumler',[
+            'productlist1'=>$productlist1
         ]);
     }
 

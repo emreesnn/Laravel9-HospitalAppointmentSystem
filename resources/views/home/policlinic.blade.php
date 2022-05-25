@@ -12,8 +12,8 @@
                     <div class="mu-page-breadcrumb-area">
                         <h2>Bölüm Hakkında</h2>
                         <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">{{$data->category->title}}</a></li>
+                            <li><a href={{route('index')}}>Home</a></li>
+                            <li><a href={{route('bolumler')}}>{{$data->category->title}}</a></li>
                             <li class="active">{{$data->title}}</li>
                         </ol>
                     </div>

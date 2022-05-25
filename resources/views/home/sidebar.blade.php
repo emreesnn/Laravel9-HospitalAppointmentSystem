@@ -15,18 +15,18 @@
                 </button>
                 <!-- LOGO -->
                 <!-- TEXT BASED LOGO -->
-                <a class="navbar-brand" href="index.html"><i class="fa fa-university"></i><span>Varsity</span></a>
+                <a class="navbar-brand" href={{route('index')}}><i class="fa fa-hospital-o"></i><span>Hastane</span></a>
                 <!-- IMG BASED LOGO  -->
                 <!-- <a class="navbar-brand" href="index.html"><img src="{{asset('assets')}}/img/logo.png" alt="logo"></a> -->
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active"><a href={{route('index')}}>Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hastanemiz <span class="fa fa-angle-down"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             @foreach($mainCategories as $rs)
-                            <li><a href="course.html">{{$rs->title}}</a></li>
+                            <li><a href={{route('bolumler')}}>{{$rs->title}}</a></li>
                             @endforeach
                         </ul>
                     </li>

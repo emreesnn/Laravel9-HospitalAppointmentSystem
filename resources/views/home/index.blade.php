@@ -32,24 +32,24 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="mu-service-area">
                         <!-- Start single service -->
-                        <div class="mu-service-single">
-                            <span class="fa fa-book"></span>
-                            <h3>Learn Online</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officiis, deleniti dolorem exercitationem praesentium, est!</p>
+                        <div class="mu-service-single" style="height: 225px">
+                            <span class="fa fa-heartbeat"></span>
+                            <h3>Ünitelerimiz</h3>
+                            <p>Ünitelerimizde son teknoloji ürünler ile dünya standartlarında hizmet verilmektedir.</p>
                         </div>
                         <!-- Start single service -->
                         <!-- Start single service -->
-                        <div class="mu-service-single">
-                            <span class="fa fa-users"></span>
-                            <h3>Expert Teachers</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officiis, deleniti dolorem exercitationem praesentium, est!</p>
+                        <div class="mu-service-single" style="height: 225px">
+                            <span class="fa fa-user-md"></span>
+                            <h3>Doktorlar</h3>
+                            <p>Hastanemizde alanının en iyisi bilgili,güvenilir ve yetenekli doktorlarmız bulunmaktadır.</p>
                         </div>
                         <!-- Start single service -->
                         <!-- Start single service -->
-                        <div class="mu-service-single">
-                            <span class="fa fa-table"></span>
-                            <h3>Best Classrooms</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officiis, deleniti dolorem exercitationem praesentium, est!</p>
+                        <div class="mu-service-single" style="height: 225px">
+                            <span class="fa fa-gear"></span>
+                            <h3>Teknolojimiz</h3>
+                            <p>Hastanemiz sürekli yenilenen teknolojisi ve geleceğe yönelik yatırımlarla güvenle ilerlemektedir.</p>
                         </div>
                         <!-- Start single service -->
                     </div>
@@ -67,22 +67,22 @@
                         <!-- Start Title -->
                         <div class="mu-title">
                             <h2>Bolumlerimiz</h2>
-                            <p>Göz Kardiyoloji vs vs.</p>
+                            <p>Güçlü kadromuz, yüksek teknolojimiz ile sizlere en iyi hizmeti veriyoruz.</p>
                         </div>
                         <!-- End Title -->
                         <!-- Start features content -->
-                        <div class="mu-features-content">
+                        <div class="mu-features-content" >
                             <div class="row">
                                 @foreach($productlist1 as $rs)
                                     @if($rs->status == 'True')
-                                        <div class="col-lg-2 col-md-4  col-sm-6">
-                                            <div class="mu-single-feature" style="text-align:center; cursor: pointer;"
-                                               onclick="window.location='{{route('policlinic',['id'=>$rs->id])}}';" >
+                                        <div class="col-lg-2 col-md-4  col-sm-6" >
+                                            <div style="text-align:center; cursor: pointer;" onmouseover = "this.style.backgroundColor = 'lightblue'"
+                                                 onmouseout  = "this.style.backgroundColor = 'white'" onclick="window.location='{{route('policlinic',['id'=>$rs->id])}}';" >
                                                 <span style="border:none;">
                                                     <img src="{{Storage::url($rs->image)}}"
                                                         style="width: 100px;height: 100px">
                                                 </span>
-                                                <h4>{{$rs->title}}</h4>
+                                                <h4 style="font-family: 'Roboto', sans-serif;color:#004789">{{$rs->title}}</h4>
                                             </div>
                                         </div>
                                     @endif
