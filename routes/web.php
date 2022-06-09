@@ -27,8 +27,11 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-//3- Call controller function
+// *****************HOME PAGE ROUTES *********************
 Route::get('/', [HomeController::class,'index'])->name('home');
+Route::get('/about', [HomeController::class,'about'])->name('about');
+Route::get('/contact', [HomeController::class,'contact'])->name('contact');
+Route::get('/references', [HomeController::class,'references'])->name('references');
 
 //4- Route-> Controller-> View
 Route::get('/test', [HomeController::class,'test'])->name('test');
@@ -42,7 +45,7 @@ Route::post('/save', [HomeController::class,'save'])->name('save');
 Route::get('/bolumler', [HomeController::class,'bolumler'])->name('bolumler');
 Route::get('/bolumler/policlinic/{id}', [HomeController::class,'policlinic'])->name('policlinic');
 Route::get('/categorypoliclinics/{id}/{slug}', [HomeController::class,'categorypoliclinics'])->name('categorypoliclinics');
-Route::get('/', [HomeController::class,'index'])->name('index');
+
 
 Route::middleware([
     'auth:sanctum',

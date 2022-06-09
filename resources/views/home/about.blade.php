@@ -1,6 +1,10 @@
 @extends('layouts.frontbase')
 
-@section('title', 'Bolumler')
+@section('title','Hakkımızda | '. $setting->title)
+@section('description', $setting->description)
+@section('keywords', $setting->keywords)
+@section('icon', Storage::url($setting->icon))
+
 
 @section('content')
 
@@ -10,10 +14,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="mu-page-breadcrumb-area">
-                        <h2>Bölümlerimiz</h2>
+                        <h2>Hakkımızda</h2>
                         <ol class="breadcrumb">
                             <li><a href={{route('home')}}>Home</a></li>
-                            <li><a href={{route('bolumler')}}>Bölümlerimiz</a></li>
+                            <li class="active">Hakkımızda</li>
                         </ol>
                     </div>
                 </div>
@@ -34,22 +38,14 @@
                                         <div class="col-md-12">
                                             <div class="mu-latest-course-single">
                                                 <div class="mu-latest-course-single-content">
-                                                    <h2>Bölümler</h2>
-                                                    <h4>Hastanemiz, poliklinik hizmetleri, radyoloji ünitesi, laboratuvar ünitesi, tam teşekküllü ameliyathaneleri,acil gözlem yatakları ve check-up hizmetleri ile hastalarına üst düzeyde sağlık hizmeti sunmaktadır.</h4>
-                                                    <ul style="list-style-type:none">
-                                                        @foreach($productlist1 as $rs)
-                                                            @if($rs->status == 'True')
-                                                        <li style="padding-top: 15px">
-                                                            <a href={{route('policlinic',['id'=>$rs->id])}}><img style="width: 40px;height: 40px" src="{{Storage::url($rs->image)}}">{{$rs->title}}</a>
-                                                        </li>
-                                                            @endif
-                                                            @endforeach
-                                                    </ul>
+                                                    <p>{!! $setting->aboutus !!}</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-md-3">
                             </div>
                         </div>
                     </div>

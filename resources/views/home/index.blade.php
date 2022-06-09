@@ -13,23 +13,6 @@
 
 @section('content')
 
-    <!-- Start search box -->
-    <div id="mu-search">
-        <div class="mu-search-area">
-            <button class="mu-search-close"><span class="fa fa-close"></span></button>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <form class="mu-search-form">
-                            <input type="search" placeholder="Type Your Keyword(s) & Hit Enter">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End search box -->
-
     <!-- Start service  -->
     <section id="mu-service">
         <div class="container">
@@ -101,97 +84,6 @@
         </div>
     </section>
     <!-- End features section -->
-    <!-- Start about us -->
-    <section id="mu-about-us">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="mu-about-us-area">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6">
-                                <div class="mu-about-us-left">
-                                    <!-- Start Title -->
-                                    <div class="mu-title">
-                                        <h2>About Us</h2>
-                                    </div>
-                                    <!-- End Title -->
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum pariatur fuga eveniet soluta aspernatur rem, nam voluptatibus voluptate voluptates sapiente, inventore. Voluptatem, maiores esse molestiae.</p>
-                                    <ul>
-                                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                                        <li>Saepe a minima quod iste libero rerum dicta!</li>
-                                        <li>Voluptas obcaecati, iste porro fugit soluta consequuntur. Veritatis?</li>
-                                        <li>Ipsam deserunt numquam ad error rem unde, omnis.</li>
-                                        <li>Repellat assumenda adipisci pariatur ipsam eos similique, explicabo.</li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quaerat harum facilis excepturi et? Mollitia!</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="mu-about-us-right">
-                                    <a id="mu-abtus-video" href="https://www.youtube.com/embed/HN3pm9qYAUs" target="mutube-video">
-                                        <img src="{{asset('assets')}}/img/about-us.jpg" alt="img">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End about us -->
-
-    <!-- Start about us counter -->
-    <section id="mu-abtus-counter">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="mu-abtus-counter-area">
-                        <div class="row">
-                            <!-- Start counter item -->
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="mu-abtus-counter-single">
-                                    <span class="fa fa-book"></span>
-                                    <h4 class="counter">568</h4>
-                                    <p>Subjects</p>
-                                </div>
-                            </div>
-                            <!-- End counter item -->
-                            <!-- Start counter item -->
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="mu-abtus-counter-single">
-                                    <span class="fa fa-users"></span>
-                                    <h4 class="counter">3500</h4>
-                                    <p>Students</p>
-                                </div>
-                            </div>
-                            <!-- End counter item -->
-                            <!-- Start counter item -->
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="mu-abtus-counter-single">
-                                    <span class="fa fa-flask"></span>
-                                    <h4 class="counter">65</h4>
-                                    <p>Modern Lab</p>
-                                </div>
-                            </div>
-                            <!-- End counter item -->
-                            <!-- Start counter item -->
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <div class="mu-abtus-counter-single no-border">
-                                    <span class="fa fa-user-secret"></span>
-                                    <h4 class="counter">250</h4>
-                                    <p>Teachers</p>
-                                </div>
-                            </div>
-                            <!-- End counter item -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End about us counter -->
-
     <!-- Start latest course section -->
     <section id="mu-latest-courses">
         <div class="container">

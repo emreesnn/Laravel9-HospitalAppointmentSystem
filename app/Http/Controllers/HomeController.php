@@ -28,7 +28,27 @@ class HomeController extends Controller
             'productlist1'=>$productlist1
         ]);
     }
-
+    public function about()
+    {
+        $setting = Setting::first();
+        return view('home.about',[
+            'setting' => $setting,
+        ]);
+    }
+    public function contact()
+    {
+        $setting = Setting::first();
+        return view('home.contact',[
+            'setting' => $setting,
+        ]);
+    }
+    public function references()
+    {
+        $setting = Setting::first();
+        return view('home.references',[
+            'setting' => $setting,
+        ]);
+    }
     public function policlinic($id)
     {
         $data = Policlinic::find($id);

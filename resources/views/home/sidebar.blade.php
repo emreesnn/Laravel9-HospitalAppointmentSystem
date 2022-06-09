@@ -1,3 +1,19 @@
+<!-- Start search box -->
+<div id="mu-search">
+    <div class="mu-search-area">
+        <button class="mu-search-close"><span class="fa fa-close"></span></button>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="mu-search-form">
+                        <input type="search" placeholder="Type Your Keyword(s) & Hit Enter">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End search box -->
 <!-- Start menu -->
 <section id="mu-menu">
     <nav class="navbar navbar-default" role="navigation">
@@ -15,13 +31,13 @@
                 </button>
                 <!-- LOGO -->
                 <!-- TEXT BASED LOGO -->
-                <a class="navbar-brand" href={{route('index')}}><i class="fa fa-hospital-o"></i><span>Hastane</span></a>
+                <a class="navbar-brand" href={{route('home')}}><i class="fa fa-hospital-o"></i><span>Hastane</span></a>
                 <!-- IMG BASED LOGO  -->
                 <!-- <a class="navbar-brand" href="index.html"><img src="{{asset('assets')}}/img/logo.png" alt="logo"></a> -->
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-                    <li class="active"><a href={{route('index')}}>Home</a></li>
+                    <li class="active"><a href={{route('home')}}>Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hastanemiz <span class="fa fa-angle-down"></span></a>
                         <ul class="dropdown-menu" role="menu">
@@ -30,8 +46,6 @@
                             @endforeach
                         </ul>
                     </li>
-
-                    <li><a href="gallery.html">Gallery</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Online İşlemler <span class="fa fa-angle-down"></span></a>
                         <ul class="dropdown-menu" role="menu">
@@ -39,8 +53,17 @@
                             <li><a href="blog-single.html">Blog Single</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="404.html">Login</a></li>
+                    <li><a href="{{route('contact')}}">İletişim</a></li>
+                    <li><a href="{{route('about')}}">Hakkımızda</a></li>
+                    <li><a href="{{route('references')}}">Referanslar</a></li>
+                    <button class="dropdown mu-read-more-btn" style="background-color: #204d74">
+                        <a href="404.html" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-user"> </span> </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">My Account</a> </li>
+                            <li><a href="#">Login</a> </li>
+                            <li><a href="#">Register</a> </li>
+                        </ul>
+                    </button>
                     <li><a href="#" id="mu-search-icon"><i class="fa fa-search"></i></a></li>
                 </ul>
             </div><!--/.nav-collapse -->
