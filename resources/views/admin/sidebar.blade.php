@@ -61,7 +61,7 @@
                 <a href="/admin/faq"><i class="fa fa-question-circle fa-fw" style="font-size:22px;padding-right:30px;"></i>FAQ</a>
             </li>
             <li class="">
-                <a href="/admin/messages"><i class="fa fa-envelope fa-fw" style="font-size:22px;padding-right:30px;"></i>Messages</a>
+                <a href="{{route('admin.message.index')}}"><i class="fa fa-envelope fa-fw" style="font-size:22px;padding-right:30px;"></i>Messages</a>
             </li>
             <li class="">
                 <a href="/admin/user"><i class="fa fa-user fa-fw" style="color:#0000FF; font-size:22px;padding-right:30px;" ></i>Users</a>

@@ -41,26 +41,28 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mu-contact-left">
-                                        <form class="contactform">
+                                        <div class="row">@include ('home.messages')</div>
+                                        <form class="contactform" action="{{route("storemessage")}}" method="post" >
+                                            @csrf
                                             <p class="comment-form-author">
                                                 <label for="author">Ad Soyad <span class="required">*</span></label>
-                                                <input type="text" required="required" size="30" value="" name="author">
+                                                <input type="text" required="required" size="30" value="" name="name" placeholder="Ad Soyad">
                                             </p>
                                             <p class="comment-form-email">
                                                 <label for="email">E-posta <span class="required">*</span></label>
-                                                <input type="email" required="required" aria-required="true" value="" name="email">
+                                                <input type="email" required="required" aria-required="true" value="" name="email" placeholder="örnek@mail.com">
                                             </p>
                                             <p class="comment-form-email">
                                                 <label for="phone">Telefon <span class="required">*</span></label>
-                                                <input type="text" required="required" aria-required="true" value="" name="phone">
+                                                <input type="text" required="required" aria-required="true" value="" name="phone" placeholder="111-111 11 11">
                                             </p>
                                             <p class="comment-form-url">
                                                 <label for="subject">Konu </label>
-                                                <input type="text" name="subject">
+                                                <input type="text" name="subject" placeholder="Konu">
                                             </p>
                                             <p class="comment-form-comment">
-                                                <label for="comment">Mesajınız </label>
-                                                <textarea required="required" aria-required="true" rows="8" cols="45" name="comment"></textarea>
+                                                <label for="message">Mesajınız </label>
+                                                <textarea required="required" aria-required="true" rows="8" cols="45" name="message" placeholder="..."></textarea>
                                             </p>
                                             <p class="form-submit">
                                                 <input type="submit" value="Gönder" class="mu-post-btn" name="submit">
