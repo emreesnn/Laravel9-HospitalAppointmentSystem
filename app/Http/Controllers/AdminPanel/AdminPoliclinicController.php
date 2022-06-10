@@ -7,7 +7,6 @@ use App\Models\Category;
 use App\Models\Policlinic;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-
 class AdminPoliclinicController extends Controller
 {
     /**

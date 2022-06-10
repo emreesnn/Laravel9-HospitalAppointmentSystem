@@ -58,7 +58,7 @@
                 <a href="/admin/comments"><i class="fa fa-comment fa-fw" style="font-size:22px;padding-right:30px;"></i>Comments</a>
             </li>
             <li class="">
-                <a href="/admin/faq"><i class="fa fa-question-circle fa-fw" style="font-size:22px;padding-right:30px;"></i>FAQ</a>
+                <a href="{{route('admin.faq.index')}}"><i class="fa fa-question-circle fa-fw" style="font-size:22px;padding-right:30px;"></i>FAQ</a>
             </li>
             <li class="">
                 <a href="{{route('admin.message.index')}}"><i class="fa fa-envelope fa-fw" style="font-size:22px;padding-right:30px;"></i>Messages</a>
