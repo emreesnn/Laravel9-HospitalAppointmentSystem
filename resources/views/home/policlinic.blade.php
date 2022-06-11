@@ -103,7 +103,19 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="mu-comments-area">
-                                            <h3>5 Comments</h3>
+                                            @php
+                                                $average = $data->comment->average('rate');
+                                                if($average<1){ $temp = 0; $temp2 = 5;}
+                                                elseif($average<2){ $temp = 1; $temp2 = 4;}
+                                                elseif($average<3){ $temp = 2; $temp2 = 3;}
+                                                elseif($average<4){ $temp = 3; $temp2 = 2; }
+                                                elseif($average<5){ $temp = 4; $temp2 = 1;}
+                                                elseif($average==5){ $temp = 5; $temp2 = 0;}
+                                            @endphp
+                                            <h3>@for($i=0;$i<$temp;$i++)<span class="fa fa-star"></span>@endfor
+                                                    @for($i=0;$i<$temp2;$i++)<span class="fa fa-star-o"></span>@endfor
+                                                    <span>{{number_format($average,1)}}/5 </span>
+                                                    <span class="fa fa-angle-double-right" style="padding-left: 20px"></span>{{$data->comment->count('id')}} Değerlendirme</h3>
                                             <div class="comments">
                                                 <ul class="commentlist">
                                                     <!-- Single Comment -->
@@ -112,14 +124,14 @@
                                                         <div class="media">
                                                             <div class="media-left">
                                                                 <img alt="img" src="assets/img/testimonial-1.png" class="media-object news-img">
+                                                                <a class="reply-btn"><span class="fa fa-star-o"></span> {{$rs->rate}}</a>
                                                             </div>
                                                             <div class="media-body">
                                                                 <h4 class="author-name">{{$rs->user->name}}</h4>
                                                                 <span class="comments-date"> {{$rs->created_at}}</span>
                                                                 <strong>{{$rs->subject}}</strong>
-                                                                <p>{{$rs->review}}</p>
-                                                                <strong>{{$rs->rate}}</strong>
-                                                                <a class="reply-btn" href="#">Reply <span class="fa fa-long-arrow-right"></span></a>
+                                                                <p>{{$rs->review}} </p>
+
                                                             </div>
                                                         </div>
                                                     </li>
@@ -151,6 +163,7 @@
                                     </div>
                                 </div>
                                 <!-- end blog comment -->
+
                                 <!-- start respond form -->
                                 <div class="row">
                                     <div class="col-md-12">
@@ -178,8 +191,7 @@
                                                     <p class="comment-form-url">
                                                     <h3>rating</h3>
                                                     <input type="radio" id="star5" name="rate" value="5" /><label for="star5" ></label>
-                                                    <span><input type="radio" id="star4" name="rate" value="4" /><label for="star4" ></label></span>
-
+                                                    <input type="radio" id="star4" name="rate" value="4" /><label for="star4" ></label>
                                                     <input type="radio" id="star3" name="rate" value="3" /><label for="star3" ></label>
                                                     <input type="radio" id="star2" name="rate" value="2" /><label for="star2" ></label>
                                                     <input type="radio" id="star1" name="rate" value="1" /><label for="star1" ></label>
@@ -192,7 +204,7 @@
                                                 </p>
                                                 @else
                                                     <p class="form-submit">
-                                                        <input href="/login" value="Yorum yapmak için Giriş yapınız." class="mu-post-btn" >
+                                                        <a href="/login" class="mu-post-btn">Yorum yapmak için Giriş yapınız</a>
                                                     </p>
                                                 @endauth
                                             </form>

@@ -15,6 +15,6 @@ class Policlinic extends Model
     }
     public function comment()
     {
-        return $this->hasMany(comment::class);
+        return $this->hasMany(Comment::class);
     }
 }
