@@ -93,7 +93,7 @@ class HomeController extends Controller
     public function policlinic($id)
     {
         $data = Policlinic::find($id);
-        $reviews = Comment::where('policlinic_id',$id)->get();
+        $reviews = Comment::where('policlinic_id',$id)->where('status','True')->get();
         return view('home.policlinic',[
             'data'=>$data,
             'reviews'=>$reviews,

@@ -156,7 +156,7 @@
                                     <div class="col-md-12">
                                         <div id="respond">
                                             <h3 class="reply-title">Bir Yorum Yazın</h3>
-                                            <li id="commentform" action="{{route('storecomment')}}" method="post">
+                                            <form id="commentform" action="{{route('storecomment')}}" method="post">
                                                 @csrf
                                                 <input type="hidden" name="policlinic_id" value="{{$data->id}}">
                                                 <p class="comment-notes">
@@ -168,7 +168,7 @@
                                                 </p>
                                                 <p class="comment-form-comment">
                                                     <label for="message">Yorum</label>
-                                                    <textarea required="required" aria-required="true" rows="8" cols="45" name="message" placeholder="Yorumunuz..."></textarea>
+                                                    <textarea required="required" aria-required="true" rows="8" cols="45" name="review" placeholder="Yorumunuz..."></textarea>
                                                 </p>
                                                 <select class="form-control">
                                                     <option value="1">1</option>

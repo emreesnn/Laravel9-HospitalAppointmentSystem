@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('user_id');
-            $table->string('product_id');
+            $table->string('policlinic_id');
             $table->string('subject',100);
             $table->string('review')->nullable();
             $table->string('IP',20)->nullable();

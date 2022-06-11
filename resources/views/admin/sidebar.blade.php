@@ -55,7 +55,7 @@
                 <a href="/admin/policlinic"><i class="fa fa-stethoscope fa-fw" style="font-size:22px;padding-right:30px;"></i>Polyclinics</a>
             </li>
             <li class="">
-                <a href="/admin/comments"><i class="fa fa-comment fa-fw" style="font-size:22px;padding-right:30px;"></i>Comments</a>
+                <a href="{{route('admin.comment.index')}}"><i class="fa fa-comment fa-fw" style="font-size:22px;padding-right:30px;"></i>Comments</a>
             </li>
             <li class="">
                 <a href="{{route('admin.faq.index')}}"><i class="fa fa-question-circle fa-fw" style="font-size:22px;padding-right:30px;"></i>FAQ</a>
