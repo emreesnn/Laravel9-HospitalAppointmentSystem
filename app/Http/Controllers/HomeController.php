@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Faq;
 use App\Models\Message;
 use App\Models\Policlinic;
 use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -67,6 +69,20 @@ class HomeController extends Controller
 
         return redirect()->route('contact')->with('info','Mesajınız başarıyla iletildi,Teşekkürler.');
     }
+    public function storecomment(Request $request)
+    {
+        //dd($request);
+        $data = new Comment();
+        $data->user_id = Auth::id(); //Logged in user id
+        $data->policlinic_id = $request->input('policlinic_id');
+        $data->subject = $request->input('subject');
+        $data->review = $request->input('review');
+        $data->rate = $request->input('rate');
+        $data->ip = $request->ip();
+        $data->save();
+
+        return redirect()->route('policlinic',['id'=>$request->input('policlinic_id')])->with('info','Yorumunuz başarıyla iletildi,Teşekkürler.');
+    }
     public function references()
     {
         $setting = Setting::first();
@@ -77,8 +93,10 @@ class HomeController extends Controller
     public function policlinic($id)
     {
         $data = Policlinic::find($id);
+        $reviews = Comment::where('policlinic_id',$id)->get();
         return view('home.policlinic',[
             'data'=>$data,
+            'reviews'=>$reviews,
         ]);
     }
     public function categorypoliclinic($id)

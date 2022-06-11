@@ -36,6 +36,7 @@ Route::get('/contact', [HomeController::class,'contact'])->name('contact');
 Route::get('/references', [HomeController::class,'references'])->name('references');
 Route::post('/storemessage', [HomeController::class,'storemessage'])->name('storemessage');
 Route::get('/faq', [HomeController::class,'faq'])->name('faq');
+Route::post('/storecomment', [HomeController::class,'storecomment'])->name('storecomment');
 
 
 //4- Route-> Controller-> View
