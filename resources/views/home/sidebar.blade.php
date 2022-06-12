@@ -56,14 +56,25 @@
                     <li><a href="{{route('contact')}}">İletişim</a></li>
                     <li><a href="{{route('about')}}">Hakkımızda</a></li>
                     <li><a href="{{route('references')}}">Referanslar</a></li>
-                    <button class="dropdown mu-read-more-btn" style="background-color: #204d74">
-                        <a href="404.html" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-user"> </span> </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">My Account</a> </li>
-                            <li><a href="#">Login</a> </li>
-                            <li><a href="#">Register</a> </li>
-                        </ul>
-                    </button>
+                    <!--button class="dropdown mu-read-more-btn" style="background-color: #204d74"-->
+                    <li class="dropdown">
+                        @auth
+                            <a href="/login" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-user"></span><span> {{Auth::user()->name}}</span> </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/loginuser">Hesabım</a> </li>
+                                <li><a href="/logoutuser" >Oturumu Kapat</a> </li>
+                            </ul>
+                        @endauth
+                        @guest
+                            <a href="/login" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-user"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/loginuser">Giriş Yap</a> </li>
+                                <li><a href="/registeruser">Kaydol</a> </li>
+                            </ul>
+                        @endguest
+                    </li>
+
+                    <!--/button-->
                     <li><a href="#" id="mu-search-icon"><i class="fa fa-search"></i></a></li>
                 </ul>
             </div><!--/.nav-collapse -->
