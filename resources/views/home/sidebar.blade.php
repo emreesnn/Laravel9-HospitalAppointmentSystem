@@ -61,8 +61,10 @@
                         @auth
                             <a href="/login" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-user"></span><span> {{Auth::user()->name}}</span> </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{route('userpanel.index')}}">Profilim</a> </li>
-                                <li><a href="/logoutuser" >Oturumu Kapat</a> </li>
+                                <li><a href="{{route('userpanel.index')}}">Profil</a></li>
+                                <li><a href="">Randevularım</a></li>
+                                <li><a href="{{route('userpanel.reviews')}}">Yorumlarım</a></li>
+                                <li><a href="/logoutuser">Oturumu Kapat</a></li>
                             </ul>
                         @endauth
                         @guest
