@@ -11,12 +11,12 @@
                         <img src="{{asset('assets')}}/adminassets/img/user.jpg" alt="">
                     </div>
                     <div class="user-info">
-                        @auth
+
                         <div>{{ Auth::user()->name}}</div>
                         <div class="user-text-online">
                             <span><a href="/logoutuser" >Oturumu Kapat</a> </span>
                         </div>
-                        @endauth
+
                     </div>
                 </div>
                 <!--end user image section-->
