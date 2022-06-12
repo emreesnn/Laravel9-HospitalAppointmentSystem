@@ -11,10 +11,12 @@
                         <img src="{{asset('assets')}}/adminassets/img/user.jpg" alt="">
                     </div>
                     <div class="user-info">
-                        <div>Jonny <strong>Deen</strong></div>
+                        @auth
+                        <div>{{ Auth::user()->name}}</div>
                         <div class="user-text-online">
-                            <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
+                            <span><a href="/logoutuser" >Oturumu Kapat</a> </span>
                         </div>
+                        @endauth
                     </div>
                 </div>
                 <!--end user image section-->
@@ -33,7 +35,7 @@
             </li>
 
             <li class="">
-                <a href="/admin"><i class="fa fa-home fa-fw" style="color: #FF0000;font-size: 22px;padding-right:30px;"></i>Dashboard</a>
+                <a href="{{route('admin.index')}}"><i class="fa fa-home fa-fw" style="color: #FF0000;font-size: 22px;padding-right:30px;"></i>Home</a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-calendar fa-fw" style="color: #FF9A00;font-size:22px;padding-right:30px;"></i>Appointment<span class="fa arrow"></span></a>
