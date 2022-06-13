@@ -64,8 +64,8 @@ class HomeController extends Controller
     public function appointment()
     {
         $setting = Setting::first();
-        $clinics = Policlinic::all();
-        $data= RoleUser::where('role_id','=','1')->get('user_id');
+        $clinics = Policlinic::where('status','True')->get();
+        $data= RoleUser::where('role_id','=','3')->get('user_id');
         $doctors= User::find($data);
         return view('home.appointment',[
             'setting'=>$setting,
@@ -81,8 +81,8 @@ class HomeController extends Controller
         $data->user_id = Auth::id(); //Logged in user id
         $data->policlinic_id = $request->input('policlinic');
         $data->doctor_id = $request->input('doctor');
-        $data->date =  $request->input('day')."/".$request->input('month');
-        $data->time = '1';
+        $data->date =  $request->input('date');
+        $data->time = $request->input('time');
         $data->price = '100';
         $data->payment = 'Yes';
         $data->ip = $request->ip();
@@ -204,7 +204,7 @@ class HomeController extends Controller
             'setting'=>$setting,
         ]);
     }
-    public function register()
+    public function registeruser()
     {
         $setting = Setting::first();
         return view('home.register',[

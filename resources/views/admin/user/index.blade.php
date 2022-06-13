@@ -25,9 +25,8 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>Role</th>
-                            <th>Status</th>
                             <th style="width: 40px">Show</th>
-                            <th style="width: 40px">Delete</th>
+
                         </tr>
                         </thead>
                         <tbody>
@@ -42,16 +41,12 @@
                                 @endforeach
 
                             </td>
-                            <td>{{$rs->status}}</td>
                             <td>
                                 <a href="{{route('admin.user.show',['id'=>$rs->id])}}"class="btn btn-info"
                                    onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')">
                                     Show
                                 </a>
                             </td>
-                            <td><a href="{{route('admin.message.destroy',['id'=>$rs->id])}}"class="btn btn-danger"
-                                   onclick="return confirm('Deleting !! Are you sure ?')">Delete</a></td>
-
                         </tr>
                         @endforeach
                         </tbody>

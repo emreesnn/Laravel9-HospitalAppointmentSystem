@@ -48,6 +48,9 @@ Route::view('/loginadmin','admin.login')->name('loginadmin');
 Route::post('/loginadmincheck',[HomeController::class,'loginadmincheck'])->name('loginadmincheck');
 Route::get('/appointment',[HomeController::class,'appointment'])->name('appointment');
 Route::post('/storeappointment', [HomeController::class,'storeappointment'])->name('storeappointment');
+Route::get('/bolumler', [HomeController::class,'bolumler'])->name('bolumler');
+Route::get('/bolumler/policlinic/{id}', [HomeController::class,'policlinic'])->name('policlinic');
+Route::get('/categorypoliclinics/{id}/{slug}', [HomeController::class,'categorypoliclinics'])->name('categorypoliclinics');
 //4- Route-> Controller-> View
 Route::get('/test', [HomeController::class,'test'])->name('test');
 
@@ -57,9 +60,7 @@ Route::get('/param/{id}/{number}', [HomeController::class,'param'])->name('param
 //6- Route with post
 Route::post('/save', [HomeController::class,'save'])->name('save');
 
-Route::get('/bolumler', [HomeController::class,'bolumler'])->name('bolumler');
-Route::get('/bolumler/policlinic/{id}', [HomeController::class,'policlinic'])->name('policlinic');
-Route::get('/categorypoliclinics/{id}/{slug}', [HomeController::class,'categorypoliclinics'])->name('categorypoliclinics');
+
 
 
 Route::middleware([

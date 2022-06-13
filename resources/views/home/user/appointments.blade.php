@@ -63,7 +63,7 @@
                                                                 <td>{{$rs->payment}}</td>
                                                                 <td>{{$rs->status}}</td>
                                                                 <td><a href="{{route('userpanel.appointmentcancel',['id'=>$rs->id])}}"class="btn btn-danger"
-                                                                       onclick="return confirm('Deleting !! Are you sure ?')">Delete</a></td>
+                                                                       onclick="return confirm('Deleting !! Are you sure ?')">Cancel</a></td>
                                                             </tr>
                                                         @endforeach
                                                         </tbody>

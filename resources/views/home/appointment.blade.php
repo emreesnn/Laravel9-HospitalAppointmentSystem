@@ -56,27 +56,11 @@
                                                     @endforeach
                                                 </select>
                                             </p>
-                                            <p class="comment-form-email">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                    <span>
-                                                        <label for="email">Gün</label>
-                                                        <select class="form-control" name="day">
-                                                            @for($i=1;$i<31;$i++)
-                                                                <option>{{$i}}</option>
-                                                            @endfor
-                                                        </select>
-                                                    </span>
-                                                        <span>
-                                                        <label for="email">Ay</label>
-                                                        <select class="form-control" name="month">
-                                                            @for($i=1;$i<13;$i++)
-                                                                <option>{{$i}}</option>
-                                                            @endfor
-                                                        </select>
-                                                    </span>
-                                                    </div>
-                                                </div>
+                                            <p class="form-submit">
+                                                <input type="date" value="" class="mu-post-btn" name="date">
+                                            </p>
+                                            <p class="form-submit">
+                                                <input type="time" value="" class="mu-post-btn" name="time">
                                             </p>
                                             @auth
                                                 <p class="form-submit">

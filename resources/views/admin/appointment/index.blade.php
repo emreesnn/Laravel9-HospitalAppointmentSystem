@@ -35,7 +35,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($appointments as $rs)
+                        @foreach($data as $rs)
                         <tr>
                             <td>{{$rs->id}}</td>
                             <td>{{$rs->user->name}}</td>

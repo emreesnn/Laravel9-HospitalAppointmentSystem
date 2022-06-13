@@ -36,7 +36,7 @@ class UserController extends Controller
         ]);
     }
 
-    public function appointmentcancel(Category $category,$id)
+    public function appointmentcancel($id)
     {
         //
         $data= Appointment::find($id);
