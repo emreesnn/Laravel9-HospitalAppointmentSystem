@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('parent_id');
             $table->string('title');
             $table->string('keywords')->nullable();
-            $table->string('description')->nullable();
+            $table->string('description',9999)->nullable();
             $table->string('image')->nullable();
             $table->string('status',length: 6);
             $table->timestamps();

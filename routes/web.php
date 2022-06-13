@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminPanel\AdminPoliclinicController;
 use App\Http\Controllers\AdminPanel\AdminUserController;
+use App\Http\Controllers\AdminPanel\AppointmentController;
 use App\Http\Controllers\AdminPanel\CommentController;
 use App\Http\Controllers\AdminPanel\FaqController;
 use App\Http\Controllers\AdminPanel\ImageController;
@@ -45,7 +46,8 @@ Route::view('/registeruser','home.register')->name('registeruser');
 Route::get('/logoutuser',[HomeController::class,'logout'])->name('logoutuser');
 Route::view('/loginadmin','admin.login')->name('loginadmin');
 Route::post('/loginadmincheck',[HomeController::class,'loginadmincheck'])->name('loginadmincheck');
-
+Route::get('/appointment',[HomeController::class,'appointment'])->name('appointment');
+Route::post('/storeappointment', [HomeController::class,'storeappointment'])->name('storeappointment');
 //4- Route-> Controller-> View
 Route::get('/test', [HomeController::class,'test'])->name('test');
 
@@ -76,7 +78,9 @@ Route::middleware('auth')->group(function() {
     Route::prefix('userpanel')->name('userpanel.')->controller(UserController::class)->group(function () {
         Route::get('/','index')->name('index');
         Route::get('/reviews','reviews')->name('reviews');
+        Route::get('/appointments','appointments')->name('appointments');
         Route::get('/reviewdestroy/{id}','reviewdestroy')->name('reviewdestroy');
+        Route::get('/appointmentcancel/{id}','appointmentcancel')->name('appointmentcancel');
     });
 // *****************ADMIN PANEL ROUTES *********************
     Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
@@ -147,6 +151,14 @@ Route::middleware('auth')->group(function() {
             Route::post('/addrole/{id}','addrole')->name('addrole');
             Route::get('/destroyrole/{uid}/{rid}','destroyrole')->name('destroyrole');
 
+        });
+
+        // *****************ADMIN APPOINTMENT ROUTES *********************
+        Route::prefix('/appointment')->name('appointment.')->controller(AppointmentController::class)->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('/show/{id}','show')->name('show');
+            Route::post('/update/{id}','update')->name('update');
+            Route::get('/destroy/{id}','destroy')->name('destroy');
         });
     });
 });

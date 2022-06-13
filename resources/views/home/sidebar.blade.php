@@ -37,7 +37,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-                    <li class="active"><a href={{route('home')}}>Home</a></li>
+                    <li class="active"><a href={{route('home')}}>Ana Sayfa</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hastanemiz <span class="fa fa-angle-down"></span></a>
                         <ul class="dropdown-menu" role="menu">
@@ -46,13 +46,7 @@
                             @endforeach
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Online İşlemler <span class="fa fa-angle-down"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="blog-single.html">E-Randevu</a></li>
-                            <li><a href="blog-single.html">Blog Single</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="{{route('appointment')}}">E-Randevu</a></li>
                     <li><a href="{{route('contact')}}">İletişim</a></li>
                     <li><a href="{{route('about')}}">Hakkımızda</a></li>
                     <li><a href="{{route('references')}}">Referanslar</a></li>

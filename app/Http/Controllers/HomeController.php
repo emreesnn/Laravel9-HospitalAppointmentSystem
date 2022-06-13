@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Appointment;
 use App\Models\Category;
 use App\Models\Comment;
 use App\Models\Faq;
 use App\Models\Message;
 use App\Models\Policlinic;
+use App\Models\Role;
+use App\Models\RoleUser;
 use App\Models\Setting;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -25,11 +29,13 @@ class HomeController extends Controller
         $sliderdata = DB::table('images')->limit(4)->get();
         $productlist1 = Policlinic::limit(6)->get();
         $setting = Setting::first();
+        $units = Category::where('parent_id','=',16)->get();
         return view('home.index',[
             'page'=>$page,
             'setting'=>$setting,
             'sliderdata'=>$sliderdata,
-            'productlist1'=>$productlist1
+            'productlist1'=>$productlist1,
+            'units'=>$units
         ]);
     }
     public function about()
@@ -55,6 +61,36 @@ class HomeController extends Controller
             'datalist' => $datalist
         ]);
     }
+    public function appointment()
+    {
+        $setting = Setting::first();
+        $clinics = Policlinic::all();
+        $data= RoleUser::where('role_id','=','1')->get('user_id');
+        $doctors= User::find($data);
+        return view('home.appointment',[
+            'setting'=>$setting,
+            'clinics' => $clinics,
+            'data' => $data,
+            'doctors' => $doctors
+        ]);
+    }
+    public function storeappointment(Request $request)
+    {
+        //dd($request);
+        $data = new Appointment();
+        $data->user_id = Auth::id(); //Logged in user id
+        $data->policlinic_id = $request->input('policlinic');
+        $data->doctor_id = $request->input('doctor');
+        $data->date =  $request->input('day')."/".$request->input('month');
+        $data->time = '1';
+        $data->price = '100';
+        $data->payment = 'Yes';
+        $data->ip = $request->ip();
+        $data->save();
+
+        return redirect()->route('appointment')->with('success','Randevunuz başarıyla oluşturuldu,Teşekkürler.');
+    }
+
     public function storemessage(Request $request)
     {
         //dd($request);
@@ -92,25 +128,31 @@ class HomeController extends Controller
     }
     public function policlinic($id)
     {
+        $setting = Setting::first();
         $data = Policlinic::find($id);
         $reviews = Comment::where('policlinic_id',$id)->where('status','True')->get();
         return view('home.policlinic',[
             'data'=>$data,
+            'setting'=>$setting,
             'reviews'=>$reviews,
         ]);
     }
     public function categorypoliclinic($id)
     {
+        $setting = Setting::first();
         $data = Policlinic::find($id);
         return view('home.policlinic',[
             'data'=>$data,
+            'setting'=>$setting,
         ]);
     }
     public function bolumler()
     {
+        $setting = Setting::first();
         $productlist1 = Policlinic::limit(6)->get();
         return view('home.bolumler',[
-            'productlist1'=>$productlist1
+            'productlist1'=>$productlist1,
+            'setting'=>$setting,
         ]);
     }
 

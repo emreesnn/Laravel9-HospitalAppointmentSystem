@@ -37,17 +37,9 @@
             <li class="">
                 <a href="{{route('admin.index')}}"><i class="fa fa-home fa-fw" style="color: #FF0000;font-size: 22px;padding-right:30px;"></i>Home</a>
             </li>
-            <li>
-                <a href="#"><i class="fa fa-calendar fa-fw" style="color: #FF9A00;font-size:22px;padding-right:30px;"></i>Appointment<span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level">
-                    <li>
-                        <a href="flot.html">Upcoming Appointment</a>
-                    </li>
-                    <li>
-                        <a href="morris.html">Unconfirmed Appointment</a>
-                    </li>
-
-                </ul>
+            <li class="">
+                <a href="{{route('admin.appointment.index')}}"><i class="fa fa-calendar fa-fw" style="color:#FFFF00;font-size:22px;padding-right:30px;"></i>Appointment</a>
+            </li>
                 <!-- second-level-items -->
             </li>
             <li class="">

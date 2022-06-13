@@ -131,7 +131,6 @@
                                                                 <span class="comments-date"> {{$rs->created_at}}</span>
                                                                 <strong>{{$rs->subject}}</strong>
                                                                 <p>{{$rs->review}} </p>
-
                                                             </div>
                                                         </div>
                                                     </li>

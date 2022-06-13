@@ -9,11 +9,11 @@
                             <div class="mu-header-top-left">
                                 <div class="mu-top-email">
                                     <i class="fa fa-envelope"></i>
-                                    <span>info@markups.io</span>
+                                    <span>{{$setting->smtpemail}}</span>
                                 </div>
                                 <div class="mu-top-phone">
                                     <i class="fa fa-phone"></i>
-                                    <span>(568) 986 652</span>
+                                    <span>{{$setting->phone}}</span>
                                 </div>
                             </div>
                         </div>
