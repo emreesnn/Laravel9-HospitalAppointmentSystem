@@ -14,7 +14,7 @@
                         <h2>Randevu Kayıt</h2>
                         <ol class="breadcrumb">
                             <li><a href={{route('home')}}>Ana Sayfa</a></li>
-                            <li class="active">İletişim</li>
+                            <li class="active">E-Randevu</li>
                         </ol>
                     </div>
                 </div>
@@ -57,24 +57,36 @@
                                                 </select>
                                             </p>
                                             <p class="comment-form-email">
-                                                <label for="email">Gün</label>
-                                                <select class="form-control" name="day">
-                                                    @for($i=1;$i<31;$i++)
-                                                        <option>{{$i}}</option>
-                                                    @endfor
-                                                </select>
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                    <span>
+                                                        <label for="email">Gün</label>
+                                                        <select class="form-control" name="day">
+                                                            @for($i=1;$i<31;$i++)
+                                                                <option>{{$i}}</option>
+                                                            @endfor
+                                                        </select>
+                                                    </span>
+                                                        <span>
+                                                        <label for="email">Ay</label>
+                                                        <select class="form-control" name="month">
+                                                            @for($i=1;$i<13;$i++)
+                                                                <option>{{$i}}</option>
+                                                            @endfor
+                                                        </select>
+                                                    </span>
+                                                    </div>
+                                                </div>
                                             </p>
-                                            <p class="comment-form-email">
-                                                <label for="email">Ay</label>
-                                                <select class="form-control" name="month">
-                                                    @for($i=1;$i<13;$i++)
-                                                        <option>{{$i}}</option>
-                                                    @endfor
-                                                </select>
-                                            </p>
-                                            <p class="form-submit">
-                                                <input type="submit" value="Gönder" class="mu-post-btn" name="submit">
-                                            </p>
+                                            @auth
+                                                <p class="form-submit">
+                                                    <input type="submit" value="Randevu Al" class="mu-post-btn" name="submit">
+                                                </p>
+                                            @else
+                                                <p class="form-submit">
+                                                    <a href="/login" class="mu-post-btn">Randevu Almak için Giriş yapınız</a>
+                                                </p>
+                                            @endauth
                                         </form>
                                     </div>
                                 </div>

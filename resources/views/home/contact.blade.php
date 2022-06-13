@@ -32,8 +32,7 @@
                     <div class="mu-contact-area">
                         <!-- start title -->
                         <div class="mu-title">
-                            <h2>Get in Touch</h2>
-                            <p>asdasd</p>
+                            <h2>Bizimle İletişime Geçin</h2>
                         </div>
                         <!-- end title -->
                         <!-- start contact content -->

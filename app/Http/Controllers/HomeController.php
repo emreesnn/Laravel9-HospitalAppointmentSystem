@@ -197,6 +197,20 @@ class HomeController extends Controller
 
         return redirect('/');
     }
+    public function loginuser()
+    {
+        $setting = Setting::first();
+        return view('home.login',[
+            'setting'=>$setting,
+        ]);
+    }
+    public function register()
+    {
+        $setting = Setting::first();
+        return view('home.register',[
+            'setting'=>$setting,
+        ]);
+    }
 
     public function loginadmincheck(Request $request)
     {

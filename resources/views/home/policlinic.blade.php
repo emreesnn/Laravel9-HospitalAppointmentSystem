@@ -47,48 +47,47 @@
                                                         <div class="col-lg-3 col-md-3  col-sm-6">
                                                             <div class="mu-our-teacher-single">
                                                                 <figure class="mu-our-teacher-img">
-                                                                    <img src="{{asset('assets')}}/img/teachers/teacher-01.png" alt="teacher img"
+                                                                    <img src="{{asset('assets')}}/img/teachers/doctor-character-background_1270-84.png" alt="teacher img"
                                                                          style="width: 190px;height: 190px">
                                                                 </figure>
                                                                 <div class="mu-ourteacher-single-content">
                                                                     <h4>Brian Dean</h4>
-                                                                    <span>Math Teacher</span>
+                                                                    <span>Doctor</span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-3 col-md-3  col-sm-6">
                                                             <div class="mu-our-teacher-single">
                                                                 <figure class="mu-our-teacher-img">
-                                                                    <img src="{{asset('assets')}}/img/teachers/teacher-01.png" alt="teacher img"
-                                                                         style="width: 190px;height: 190px">
-                                                                </figure>
+                                                                    <img src="{{asset('assets')}}/img/teachers/doctor-character-background_1270-84.png" alt="teacher img"
+                                                                         style="width: 190px;height: 190px">                                                                </figure>
                                                                 <div class="mu-ourteacher-single-content">
                                                                     <h4>Brian Dean</h4>
-                                                                    <span>Math Teacher</span>
+                                                                    <span>Doctor</span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-3 col-md-3  col-sm-6">
                                                             <div class="mu-our-teacher-single">
                                                                 <figure class="mu-our-teacher-img">
-                                                                    <img src="{{asset('assets')}}/img/teachers/teacher-01.png" alt="teacher img"
+                                                                    <img src="{{asset('assets')}}/img/teachers/doctor-character-background_1270-84.png" alt="teacher img"
                                                                          style="width: 190px;height: 190px">
                                                                 </figure>
                                                                 <div class="mu-ourteacher-single-content">
                                                                     <h4>Brian Dean</h4>
-                                                                    <span>Math Teacher</span>
+                                                                    <span>Doctor</span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-3 col-md-3  col-sm-6">
                                                             <div class="mu-our-teacher-single">
                                                                 <figure class="mu-our-teacher-img">
-                                                                    <img src="{{asset('assets')}}/img/teachers/teacher-01.png" alt="teacher img"
+                                                                    <img src="{{asset('assets')}}/img/teachers/doctor-character-background_1270-84.png" alt="teacher img"
                                                                          style="width: 190px;height: 190px">
                                                                 </figure>
                                                                 <div class="mu-ourteacher-single-content">
                                                                     <h4>Brian Dean</h4>
-                                                                    <span>Math Teacher</span>
+                                                                    <span>Doctor</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -182,18 +181,14 @@
                                                     <label for="message">Yorum</label>
                                                     <textarea required="required" aria-required="true" rows="8" cols="45" name="review" placeholder="Yorumunuz..."></textarea>
                                                 </p>
-                                                <select class="form-control">
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                </select>
                                                 <div>
                                                     <p class="comment-form-url">
-                                                    <h3>rating</h3>
-                                                    <input type="radio" id="star5" name="rate" value="5" /><label for="star5" ></label>
-                                                    <input type="radio" id="star4" name="rate" value="4" /><label for="star4" ></label>
-                                                    <input type="radio" id="star3" name="rate" value="3" /><label for="star3" ></label>
-                                                    <input type="radio" id="star2" name="rate" value="2" /><label for="star2" ></label>
-                                                    <input type="radio" id="star1" name="rate" value="1" /><label for="star1" ></label>
+                                                    <h3>Rating</h3>
+                                                    <input type="radio" id="star5" name="rate" value="5" /><label for="star5" >5</label>
+                                                    <input type="radio" id="star4" name="rate" value="4" /><label for="star4" >4</label>
+                                                    <input type="radio" id="star3" name="rate" value="3" /><label for="star3" >3</label>
+                                                    <input type="radio" id="star2" name="rate" value="2" /><label for="star2" >2</label>
+                                                    <input type="radio" id="star1" name="rate" value="1" /><label for="star1"  >1</label>
                                                     </p>
                                                 </div>
 
@@ -211,93 +206,6 @@
                                     </div>
                                 </div>
                                 <!-- end respond form -->
-                            </div>
-                            <div class="col-md-3">
-                                <!-- start sidebar -->
-                                <aside class="mu-sidebar">
-                                    <!-- start single sidebar -->
-                                    <div class="mu-single-sidebar">
-                                        <h3>Categories</h3>
-                                        <ul class="mu-sidebar-catg">
-                                            <li><a href="#">Web Design</a></li>
-                                            <li><a href="">Web Development</a></li>
-                                            <li><a href="">Math</a></li>
-                                            <li><a href="">Physics</a></li>
-                                            <li><a href="">Camestry</a></li>
-                                            <li><a href="">English</a></li>
-                                        </ul>
-                                    </div>
-                                    <!-- end single sidebar -->
-                                    <!-- start single sidebar -->
-                                    <div class="mu-single-sidebar">
-                                        <h3>Popular Course</h3>
-                                        <div class="mu-sidebar-popular-courses">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="#">
-                                                        <img class="media-object" src="{{asset('assets')}}/img/courses/1.jpg" alt="img">
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h4 class="media-heading"><a href="#">Medical Science</a></h4>
-                                                    <span class="popular-course-price">$200.00</span>
-                                                </div>
-                                            </div>
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="#">
-                                                        <img class="media-object" src="{{asset('assets')}}/img/courses/2.jpg" alt="img">
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h4 class="media-heading"><a href="#">Web Design</a></h4>
-                                                    <span class="popular-course-price">$250.00</span>
-                                                </div>
-                                            </div>
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="#">
-                                                        <img class="media-object" src="{{asset('assets')}}/img/courses/3.jpg" alt="img">
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h4 class="media-heading"><a href="#">Health & Sports</a></h4>
-                                                    <span class="popular-course-price">$90.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end single sidebar -->
-                                    <!-- start single sidebar -->
-                                    <div class="mu-single-sidebar">
-                                        <h3>Archives</h3>
-                                        <ul class="mu-sidebar-catg mu-sidebar-archives">
-                                            <li><a href="#">May <span>(25)</span></a></li>
-                                            <li><a href="">June <span>(35)</span></a></li>
-                                            <li><a href="">July <span>(20)</span></a></li>
-                                            <li><a href="">August <span>(125)</span></a></li>
-                                            <li><a href="">September <span>(45)</span></a></li>
-                                            <li><a href="">October <span>(85)</span></a></li>
-                                        </ul>
-                                    </div>
-                                    <!-- end single sidebar -->
-                                    <!-- start single sidebar -->
-                                    <div class="mu-single-sidebar">
-                                        <h3>Tags Cloud</h3>
-                                        <div class="tag-cloud">
-                                            <a href="#">Health</a>
-                                            <a href="#">Science</a>
-                                            <a href="#">Sports</a>
-                                            <a href="#">Mathematics</a>
-                                            <a href="#">Web Design</a>
-                                            <a href="#">Admission</a>
-                                            <a href="#">History</a>
-                                            <a href="#">Environment</a>
-                                        </div>
-                                    </div>
-                                    <!-- end single sidebar -->
-                                </aside>
-                                <!-- / end sidebar -->
                             </div>
                         </div>
                     </div>

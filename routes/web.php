@@ -41,8 +41,8 @@ Route::get('/references', [HomeController::class,'references'])->name('reference
 Route::post('/storemessage', [HomeController::class,'storemessage'])->name('storemessage');
 Route::get('/faq', [HomeController::class,'faq'])->name('faq');
 Route::post('/storecomment', [HomeController::class,'storecomment'])->name('storecomment');
-Route::view('/loginuser','home.login')->name('loginuser');
-Route::view('/registeruser','home.register')->name('registeruser');
+Route::get('/loginuser',[HomeController::class,'loginuser'])->name('loginuser');
+Route::get('/registeruser',[HomeController::class,'registeruser'])->name('registeruser');
 Route::get('/logoutuser',[HomeController::class,'logout'])->name('logoutuser');
 Route::view('/loginadmin','admin.login')->name('loginadmin');
 Route::post('/loginadmincheck',[HomeController::class,'loginadmincheck'])->name('loginadmincheck');
